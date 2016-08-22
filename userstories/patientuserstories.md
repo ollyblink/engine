@@ -15,6 +15,8 @@
 **I want to be able to create, read, update, and delete personal health data.** 
 
 1. A user logs in with the specified username and password.
-2. 
+2. The encrypted private key and encrypted encryption key are transferred to the client.
+3. The private key is decrypted and used to decrypt the encryption key
+4. The encryption key is returned to the system
 
 **I want to be able to share this data with my doctor.**

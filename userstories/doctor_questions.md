@@ -1,0 +1,2 @@
+- Should the doctor have access to all the available patients? Alternatively a list can be compiled with all the users that have shared consent and consequently the doctor has access to their data.
+- Should the doctor be able to view all the records e.g. documents of the patient and then upon an access request validate the constraints or limit the records' access from the beginning?

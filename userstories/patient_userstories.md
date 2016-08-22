@@ -15,14 +15,13 @@
 **I want to be able to create, read, update, and delete personal health data.** 
 
 1. A user logs in with the specified username and password.
-2. The encrypted private key and encrypted encryption key are transferred to the client.
+2. The *encrypted private key* and *encrypted encryption key* are transferred to the client.
 3. The private key is decrypted and used to decrypt the encryption key.
 4. The encryption key is returned to the system.
-5. The user's data is decrypted and returned to the user.
-6. A new record can be created. 
-	1. A user specifies the required entries.
-	2. On save, the data is encrypted using the encryption key and stored as a new entry in the database.
-3. An existing record can be updated or deleted.
+5. The user's *data* is decrypted and returned to the user.
+6. A *new* record with the required entries can be created.
+3. An *existing* record can be *updated* or *deleted*.
+4.	On save, the *data is encrypted* using the encryption key and stored as a new entry in the database.
 
 **I want to be able to share health data with my doctor.**
 

@@ -1,3 +1,4 @@
 - is the encryption key encrypted using the **public key** or using the **password**?
 - Should the private key and encrypted key be decrypted **before** or **after** being sent to the user? Or remain on **server** side entirely?
 - Can a user invited to read and update the data of another user (like a doctor) **delete** this data?
+- Are there different **access levels** (e.g. read-only, update, delete?) for consents, such that invited users have different interaction possibilities with the users?

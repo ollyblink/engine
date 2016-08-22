@@ -19,6 +19,17 @@
 3. The private key is decrypted and used to decrypt the encryption key.
 4. The encryption key is returned to the system.
 
-**I want to be able to share this data with my doctor.**
+**I want to be able to share health data with my doctor.**
 
-1. A user invites another user to read and update 
+1. *User A* invites *user B* to *access* a data item.
+2. The system creates a matching constent record in the database.
+	1. The consent record contains 
+		1. The *emitting* user and *receiving* user of a consent.
+		2. The access level (*read-only*, *read and update*, *read, update, and delete*).
+			1. *First stage*: access level is *read-only*.
+			2. *Refinement*: additional access levels possible.
+		2. the symmetric encryption key of user A to decrypt the data
+	2. The symmetric encryption key is encrypted using the public key of user B so that only user B can decrypt the data. 
+	3. Data access
+		1. *First stage*: All data items at any time can be accessed.
+		2. *Refinement*: Single data items can be selected, temporal ranges (e.g. from Oct. to Nov.) can be defined.

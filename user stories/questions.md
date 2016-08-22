@@ -1,0 +1,1 @@
+- is the encryption key encrypted using the **public key** or using the **password**?

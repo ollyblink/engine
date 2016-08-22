@@ -26,12 +26,12 @@
 **I want to be able to share health data with my doctor.**
 
 1. *User A* invites *user B* to *access* a data item.
-2. On invitation, the system creates a matching *constent record* in the database.
+2. On invitation, the system creates a matching *consent record* in the database.
 	1. The consent record contains 
 		1. The *emitting* user of a consent (user A) and 
 		2. the *receiving* user of a consent (user B).
 		3. The *symmetric encryption key* of user A to decrypt the data, encrypted using the public key of user B (so that only user B can decrypt the data). 
-		4. *Constraints*:
+		4. *Constraints* to be defined:
 			1. The data *topic* (identifier, title)
 				1. *First stage*: All data items at any time can be accessed for a topic.
 				2. *Refinement*: Single data items can be selected for a topic, temporal ranges (e.g. from Oct. to Nov.) can be defined. 
@@ -39,4 +39,4 @@
 				1. *First stage*: access level is *read-only*.
 				2. *Refinement*: additional access levels possible.
 		
-	2. 
+3. 

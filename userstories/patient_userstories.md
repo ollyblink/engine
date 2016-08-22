@@ -18,18 +18,26 @@
 2. The encrypted private key and encrypted encryption key are transferred to the client.
 3. The private key is decrypted and used to decrypt the encryption key.
 4. The encryption key is returned to the system.
+5. The user's data is decrypted and returned to the user.
+6. A new record can be created. 
+	1. A user specifies the required entries.
+	2. On save, the data is encrypted using the encryption key and stored as a new entry in the database.
+3. An existing record can be updated or deleted.
 
 **I want to be able to share health data with my doctor.**
 
 1. *User A* invites *user B* to *access* a data item.
-2. The system creates a matching constent record in the database.
+2. On invitation, the system creates a matching *constent record* in the database.
 	1. The consent record contains 
-		1. The *emitting* user and *receiving* user of a consent.
-		2. The access level (*read-only*, *read and update*, *read, update, and delete*).
-			1. *First stage*: access level is *read-only*.
-			2. *Refinement*: additional access levels possible.
-		2. the symmetric encryption key of user A to decrypt the data
-	2. The symmetric encryption key is encrypted using the public key of user B so that only user B can decrypt the data. 
-	3. Data access
-		1. *First stage*: All data items at any time can be accessed.
-		2. *Refinement*: Single data items can be selected, temporal ranges (e.g. from Oct. to Nov.) can be defined.
+		1. The *emitting* user of a consent (user A) and 
+		2. the *receiving* user of a consent (user B).
+		3. The *symmetric encryption key* of user A to decrypt the data, encrypted using the public key of user B (so that only user B can decrypt the data). 
+		4. *Constraints*:
+			1. The data *topic* (identifier, title)
+				1. *First stage*: All data items at any time can be accessed for a topic.
+				2. *Refinement*: Single data items can be selected for a topic, temporal ranges (e.g. from Oct. to Nov.) can be defined. 
+			2. The data *access level* (*read-only*, *read and update*, *read, update, and delete*).
+				1. *First stage*: access level is *read-only*.
+				2. *Refinement*: additional access levels possible.
+		
+	2. 

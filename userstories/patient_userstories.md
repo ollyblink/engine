@@ -1,6 +1,6 @@
-**As a patient...**
+# As a patient... #
 
-**I want to be able to register with username and password.**
+##I want to be able to register with username and password.##
 
 1. A user specifies a username and a personal password to register.
 2. *Optional: registration ends with sending a confirmation email.
@@ -12,9 +12,8 @@
 	1. The symmetric encryption key is encrypted when stored using the user's public key or password (see questions).
 	
 
-**I want to be able to create, read, update, and delete personal health data.** 
-
-1. A user logs in with the specified username and password.
+##I want to be able to create, read, update, and delete personal health data.##
+ 
 2. The *encrypted private key* and *encrypted encryption key* are transferred to the client.
 3. The private key is decrypted and used to decrypt the encryption key.
 4. The encryption key is returned to the system.
@@ -23,7 +22,7 @@
 3. An *existing* record can be *updated* or *deleted*.
 4.	On save, the *data is encrypted* using the encryption key and stored as a new entry in the database.
 
-**I want to be able to share health data with my doctor.**
+##I want to be able to share health data with my doctor.##
 
 1. *User A* invites *user B* to *access* a data item.
 2. On invitation, the system creates a matching *consent record* in the database.
@@ -38,5 +37,7 @@
 			2. The data *access level* (*read-only*, *read and update*, *read, update, and delete*).
 				1. *First stage*: access level is *read-only*.
 				2. *Refinement*: additional access levels possible.
-		
-3. 
+			3. ... other?
+3. When user B tries to access data of user A, the consent database needs to be checked for a consense entry.
+	1. If such an entry exists --> encryption key is decrypted using user B's private key
+	2. data requested is decrypted and sent to user B

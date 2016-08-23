@@ -1,0 +1,6 @@
+- A Restful authentication cannot store the private key or encryption key in a session, thus it needs to decrypt the encryption key with every data access --> is this feasible? 
+	- or should the encryption key be stored in an expirable token in the database? 
+	- or add the encryption key in a token and send it everytime in the headers of request/reponse (JSON web Token)? 
+	- Or instead, use a normal session?
+- We discussed that the encryption/decryption takes place **server**-side. In the document it states under the "Encryption Scheme" that the encrypted encryption and private key are sent to the **client**. This implies that the decryption takes place on the client side and we assume that this is something we want to avoid.
+- What is the structure of a **data entry**?   

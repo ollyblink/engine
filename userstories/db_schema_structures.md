@@ -12,12 +12,13 @@
     }
 ## DataDB ##
     Data {
-		pId: string/number //person's id
 		dId: string/number
+		ownerId: pId  
+		patient: pId //person's id
 		date_time: datetime
-		topic: string
+		title/topic: string
 		description: string
-		{attachments: blob}		
+		{attachment: blob}		
 	}
 ## ConsentDB ##
     Consent {
@@ -28,8 +29,8 @@
 
 		constraints { // some could be optional/default implementations
 			access-level: enum //read-only, read-update, read-update-delete or so
-			topic: string
-			*dataItem: dId
+			title/topic: string
+			*document: dId
 		}
 		 
  	}

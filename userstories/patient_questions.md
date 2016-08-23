@@ -3,4 +3,4 @@
 - Can a user invited to read and update the data of another user (like a doctor) **delete** this data?
 - Are there different **access levels** (e.g. read-only, update, delete?) for consents, such that invited users have different interaction possibilities with the inviting user's data?
 - How to **encrypt** an entry with a password? (idea behind it?)
-- Same as problem with authentication: when a user accesses data of another user, it needs to be always checked if the consense is established and then decrypt the encryption key. How to **avoid long delay** due to decryption?
+- Same as problem with authentication: when a user accesses data of another user, it needs to be always checked if the consent is established and then decrypt the encryption key. How to **avoid long delay** due to decryption?

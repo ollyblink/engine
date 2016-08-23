@@ -10,8 +10,16 @@
 - create data
 	- POST createData/topic/:topic/description/:description/...
 - read data of a user 
+	- GET readData/person/:pId/topic/:topic/description/:description/... --> for a specific data item e.g. one document
+	- GET readData/person/:pId --> returns all the data of a person
+	- GET readData/data/:dId --> return all the data of this entry
 - update data
+	- POST updateData/data/:dId/topic/:topic/description/:description/...
+	- POST updateData/data/:dId/attachment/:atId/attachmentContent/:dataOfAttachment
+	- POST updateData/data/:dId/attachmentContent/:dataOfAttachment
 - delete data
+	- POST deleteData/data/:dId --> all the data entry + consents
+	- POST deleteData/data/:dId/attachment/:atId --> deletes only an attachment + consent (if available only for this attachment)
 ##consent
 - create
 - read (needs to be exposed?)

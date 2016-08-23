@@ -1,11 +1,15 @@
 
 - login
 - recover password
-## user
+## Person
 - Register/create
+	- POST createPerson/firstname/:fname/lastname/:lname/{additional_info}/{:additional_info}
 - read 
+	- GET persons/pid/:pid
 - update (what can be updated? does this happen only when the password is updated?)
+	- UPDATE persons/pid/:pid/{updatable_item}/{:updatable_item}
 - delete (+delete consent)
+	- DELETE persons/pid/:pid
 ## user data
 - create data
 	- POST createData/topic/:topic/description/:description/...

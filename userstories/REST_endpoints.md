@@ -18,7 +18,7 @@
 - delete data
 ##consent
 - create
-	- POST createConsent/receiver/:receiver/{constraints/{:constraint}
+	- POST createconsent/receiver/:receiver/constraints/{:constraint}
 - read (needs to be exposed? Probably more for reading own consents)
 	- GET consents/receiver/:receiver/sender/:sender/
 - update (e.g. to change constraints or receiver)

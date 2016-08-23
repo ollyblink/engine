@@ -5,13 +5,27 @@
 		firstname: string
 		lastname: string
 		
-		privateKey_enc: string
+		privateKey_encPW: string
 		publicKey: string
-		encryptionKey_enc: string
+		encryptionKey_encPbK: string
 		pw_hash_salt: string
     }
-## ConsenseDB ##
-    Consense{
-
- 	}
 ## DataDB ##
+    Data {
+		dId: string/number
+		date_time: datetime
+		title: string
+		description: string		
+	}
+## ConsentDB ##
+    Consent {
+		sender: pId //the inviting user
+		receiver: pId // the invited user for data access
+		encryptionKeySender_encPbKReceiver: string
+
+		constraints { // some could be optional/default implementations
+			access-level: enum //read-only, read-update, read-update-delete or so
+			title: string
+		}
+		 
+ 	}

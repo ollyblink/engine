@@ -17,7 +17,7 @@
 		date_time: datetime
 		topic: string
 		description: string
-		attachments: blob		
+		{attachments: blob}		
 	}
 ## ConsentDB ##
     Consent {

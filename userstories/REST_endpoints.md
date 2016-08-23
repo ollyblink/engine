@@ -8,6 +8,7 @@
 - delete (+delete consent)
 ## user data
 - create data
+	- POST createData/topic/:topic/description/:description/...
 - read data of a user 
 - update data
 - delete data

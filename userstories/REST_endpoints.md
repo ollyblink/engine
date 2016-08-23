@@ -22,6 +22,10 @@
 	- POST deleteData/data/:dId/attachment/:atId --> deletes only an attachment + consent (if available only for this attachment)
 ##consent
 - create
-- read (needs to be exposed?)
-- update
-- delete
+	- POST createConsent/receiver/:receiver/{constraints/{:constraint}
+- read (needs to be exposed? Probably more for reading own consents)
+	- GET consents/receiver/:receiver/sender/:sender/
+- update (e.g. to change constraints or receiver)
+	- UPDATE consents/cId/:cId/receiver/:receiver/{constraint}/{:constraint}
+- delete (if the consent isnt required anymore)
+	- DELETE consents/cId/:cId
